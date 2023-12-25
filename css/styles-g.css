@@ -1,0 +1,39 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    gap: 10px;
+}
+
+.block {
+    height: 400px;
+    width: 49.58%;
+    position: relative;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.paragraph {
+    position: absolute;
+    top: 50%;
+    height: 200px;
+    background: rgba(238, 232, 232, 0.5);
+    margin: -100px 10px 0;
+    padding: 0 10px;
+    text-align: justify;
+    border-radius: 8px;
+    overflow: auto;
+    display: none;
+}
+
+.block:hover .paragraph {
+    display: block;
+}
+
+.list {
+    align-items: center;
+    justify-content: center;
+}

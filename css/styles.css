@@ -1,0 +1,244 @@
+@import url('reset.css');
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fredericka the Great';
+    src: url('../fonts/FrederickatheGreat-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    font-family: 'Lora';
+    font-weight: 700;
+    padding: 20px 0;
+    background: pink;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.homeworks {
+    z-index: 30;
+}
+
+.item-list {
+    position: relative;
+    z-index: 20;
+    
+}
+
+.item-list .link {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+    background: orange;
+}
+
+.item-list > .link.home {
+    padding-left: 45px;
+    background: orange;
+}
+
+.item-list > .link.gallery {
+    padding-left: 45px;
+    background: orange;
+}
+
+.item-list > .link.homeworks {
+    padding-right: 45px;
+    background: orange;
+}
+
+.item-list > .link.layauts {
+    padding-left: 45px;
+    background: yellow;
+}
+
+.item-list .link:hover {
+    background-color: coral;
+}
+
+.second-list {
+    position: absolute;
+    top: -1000%;
+    left: 0;
+    width: 100%;
+    padding-top: 20px;
+    font-family: 'Fredericka the Great';
+    font-weight: 400;
+    transition: all .5s linear;
+}
+
+.second-list .link {
+    background: yellow;
+}
+
+.item-list:hover .second-list {
+    top: 100%;
+    /* display: block; */
+}
+
+.relative {
+    position: relative;
+}
+
+.third-list {
+    position: absolute;
+    top: -1000%;
+    right: 100%;
+    /* display: none; */
+    /* opacity: 0; */
+    font-family: 'Montserrat';
+    font-weight: 400;
+    transition: all .5s linear;
+}
+
+.third-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 56px;
+    background: yellow;
+    display: block;
+}
+
+.third-link:hover {
+    background: coral;
+}
+
+.relative:hover .third-list {
+    top: 0;
+} 
+
+.link.header-link {
+    /* display: flex;
+    align-items: center;
+    gap: 5px; */
+    position: relative;
+}
+
+.link.layauts {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* position: absolute; */
+}
+
+.header-icon {
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin-top: -10px;
+    left: 10px;
+    
+    position: absolute;
+    transition: fill .3s linear;
+}
+
+.homeworks > .header-icon {
+    top: 50%;
+    margin-top: -10px;
+    right: 10px;
+    left: auto;
+
+}
+
+a.header-link:hover .header-icon {
+    fill: yellow;
+}
+
+/* SIDE-BAR */
+
+.sidebar {
+    width: 95px;
+    background: rgba(0, 0, 0, 0.158);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: .2s linear;
+    overflow: hidden;
+}
+
+.sidebar:hover {
+    width: 300px;
+}
+
+.wrap {
+    padding-left: 95px;
+    transition: .2s linear;
+}
+
+.sidebar:hover + .wrap {
+    padding-left: 300px;
+    
+}
+
+.sidebar-list {
+    padding-top: 76px;
+    
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    gap: 27px;
+    font-size: 22px;
+    text-decoration: none;
+    
+}
+
+.sidebar-link span {
+    border: 3px solid blueviolet;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(-45deg);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.sidebar-link svg {
+    width: 40px;
+    height: 40px;
+    fill: violet;
+    transform: rotate(45deg);
+    transition: .2s linear;
+    
+}
+
+.sidebar-link:hover {
+    background: rgba(136, 49, 49, 0.712);
+}
+
+.sidebar-link:hover svg {
+    transform: rotate(45deg) scale(1.4);
+    
+}
